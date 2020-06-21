@@ -54,10 +54,11 @@
       "settings": {
         "main": true,
         "title": "Dr Lalit Mohan Kataria (Shiv Shakti Clinic)",
-        "meta_descr": "",
+        "meta_descr": "Best Homeopathy Clinic in Jaipur, Online & Offline Consultation, Same Day Delivery, Arthritis Treatment, Hair Loss Treatment, Liver Disease Treatment, Kidney Stone Treatment, Hypertension Treatment, Thyroid Treatment, Famous Homeopathy Doctor, Dr. Lalit Mohan Kataria",
         "header_custom": "",
         "footer_custom": "",
-        "html_before": ""
+        "html_before": "",
+        "meta_image": "@PROJECT_PATH@/assets/images/mbr-1915x1920.png"
       },
       "components": [
         {
