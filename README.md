@@ -1,41 +1,23 @@
 ## Dr Lalit Mohan Kataria
 
-<!-- wp:paragraph {"align":"justify","dropCap":true} -->
-<p class="has-drop-cap has-text-align-justify">How you feel, when you give something to a person who doesn't have it, it not just brings happiness to him but also to your heart. But the major challenge you face is whom to help. How would you make sure, that person is not lying, that organisation is not lying and hence at last you restrict yourself and limit your boundaries.</p>
-<!-- /wp:paragraph -->
+<p style="text-align:justify;">It's a very common problem across whole data industry, people are struggling to reduce the time complexity, they bought big machines, they moved to spark but yet, there are few problems which can't be solved by just using something, it requires a deeper insight to literally feel how the framework works and why it's very slow even with considerable amount of resources.</p>
+<p style="text-align:justify;">Here we'll be discussing how spark treats a join and figure out how to join.</p>
+<p style="text-align:justify;"><!--more--></p>
+<p style="text-align:justify;">Before we go into much detail, let's discuss about varies strategies which spark uses to join.</p>
+<p style="text-align:justify;">There are 3 types of strategies:</p>
 
-<!-- wp:paragraph {"align":"justify"} -->
-<p class="has-text-align-justify">So, I decided to write a post to let you know my perception, how I see things and help people. There are lot of people who has a very wrong perception in their mind about:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:more -->
-<!--more-->
-<!-- /wp:more -->
-
-<!-- wp:heading {"level":4} -->
-<h4>Why should I help ?</h4>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"justify"} -->
-<p class="has-text-align-justify">They say whatever I've today is whatever I've earned from my own hard work or my family hard work. Why should I help someone who didn't do the hard work and now he is suffering.<br><br>The answer to this question is very deep, you need to understand whatever you have today is not just because of your hard work, it's also because you got the opportunity to do so.<br><br>Now when you say opportunity, it's a series of events happening since your childhood which results into a considerable situation to move ahead and do the hard work.<br><br>Now that series of events is in millions / billions / trillions and you never know who contributed where, your teacher who dedicated her time to make you understand, your driver who dropped you on time, your auto rickshaw who saved you once otherwise you won't have exists, just like this there are uncountable help you got from others.<br><br>So, let's help others and contribute in creating an opportunity for them to move forward in life.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":4} -->
-<h4>Whom to help ?</h4>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"justify"} -->
-<p class="has-text-align-justify">You don't trust organisation, you don't trust people who beg. Then what should you do ?<br><br>You need to think a bit more here,  you need to analyse the person who is begging, if he / she is an old personality then why does it matter if they even lies because I can't see my grandparents to be in such condition and then I'll be helping them out with whatever I can.<br><br>Maids, street vegetable sellers or any other worker with small wages, please don't bargain from them, try to give more to them. Try to ask them if you can help them with their daughter wedding or a child education or anything that make you feel happy.<br><br>If you don't have time, then you can opt for an organisation, there are lot of organisation who provides you the proof of authenticity, you can dig deeper to check if they are valid or not. Since everything is online now so it's a bit transparent to see whom you'll be helping and for what reason, <a href="https://www.ketto.org/new/signin?redirect_uri=%2F%3Futm_source%3Dexternal_Ketto%26utm_medium%3Dgoogle-search%26utm_campaign%3DS14_1001_SALE_BrandVariation_KY_ALL_CLK_IND%26utm_term%3Db_%252Bketto%2520%252Bdonate%26utm_content%3Dhomepage_resp_ad1%26utm_placement%3DKT05_AG_1865_BrandSeed_Donation%26gclid%3DEAIaIQobChMI-uqMiZHa5wIVB7aWCh2ayA7yEAAYASAAEgIpZvD_BwE&amp;as=si">Ketto</a> is one of them.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>There is one interesting question, I usually get from the people, it may seems selfish but it's just their curiosity, they ask...</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":4} -->
-<h4>What if everyone get educated then who will do the cleaning work, driving work or other small wages work ?</h4>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"justify"} -->
-<p class="has-text-align-justify">It's a very interesting question and I do have a very interesting answer to that, when people are educated they figure out the smartest way to do things. If I talk about cleaning the pit holes, today they are doing by themselves but if they educate their child, then their child can build a robot / machine to do so. In a similar way maid can be replaced, anything can be done. So it indirectly answers another question that today machines are replacing man and they are getting unemployed so if we educate them then can contribute in automating this whole world and sky is the limit.</p>
-<!-- /wp:paragraph -->
+<ol style="text-align:justify;">
+ 	<li><strong>Sort-merge Join:&nbsp;</strong>The keys from both the sides are being sorted and then merged and then data is <strong>shuffled</strong> to bring down the same set of keys on same machine so that joining can be done.
+<img class=" size-full wp-image-371 aligncenter" src="https://kshitijkuls.files.wordpress.com/2019/09/screenshot-2019-09-26-at-10.08.08-am.png" alt="Screenshot 2019-09-26 at 10.08.08 AM.png" width="1046" height="1378"></li>
+ 	<li><strong>Broadcast-hash Join:&nbsp;</strong>The smallest side is being broadcasted to each node wherever the largest side of data partition resides, then the joining takes place, this eliminates the shuffling process for bigger dataset.<img class="alignnone size-full wp-image-372" src="https://kshitijkuls.files.wordpress.com/2019/09/spark_broadcast.png" alt="spark_broadcast.png" width="528" height="797"></li>
+ 	<li><strong>Shuffle-hash Join:</strong> This is similar to the join in map reduce, it doesn't sort the data, it simply hash the keys of both datasets and shuffle the data to the nodes by <strong>(hash mod no. of executors)</strong>.</li>
+</ol>
+<p style="text-align:justify;">When both side datasets are too big, then it's better to use <strong>Sort-merge join</strong> or <strong>Shuffle-hash join</strong> depending on the data locality.</p>
+<p style="text-align:justify;">After spark 2.3 release, spark made Sort merge join as the default strategy which can be disabled by setting ‘<strong class="ko ma">spark.sql.join.preferSortMergeJoin</strong>’ = <strong>false</strong>.</p>
+<p style="text-align:justify;"><strong>Broadcast-hash Join</strong></p>
+Best suitable when one of the dataset is small [about 1 GB]. There are 2 way of achieving this:
+<ol>
+ 	<li>By setting <strong class="ko ma">spark.sql.autoBroadcastJoinThreshold</strong>, this parameter takes value in bytes and default is 10 MB, spark check the size of dataset and it found it to be lesser than the threshold value then it will broadcast this dataset automatically to all the nodes wherever big dataset partitions reside.<strong>**</strong> Sometimes it may happen that spark may not be able to figure out the size of data correctly, which may end up in <strong>sort-merge join</strong>, so to get rid if this, one can <strong>persist</strong> the dataset on <strong>disk and memory,</strong> by doing this spark will know the actual size of data and will choose the strategy accordingly.</li>
+ 	<li><strong>Forcing spark to broadcast</strong>, spark has also provided a functionality to broadcast a dataset forcefully, this approach is advisable only when we are sure about the data sizing.</li>
+</ol>
+&nbsp;
