@@ -542,8 +542,8 @@ a:hover {
   color: #dfd9c6;
 }
 /* Scroll to top button*/
-.scrollToTop_wraper {
-  display: none;
+#scrollToTop a {
+  border-radius: 100px;
 }
 .form-control {
   font-family: 'Rubik', sans-serif;
@@ -710,6 +710,20 @@ iframe.lazy-placeholder,
 section.lazy-placeholder:after {
   opacity: 0.3;
 }
+.cid-s2xuLCpu1f {
+  background-image: url("../../../assets/images/mbr-6-1920x1280.jpg");
+}
+.cid-s2xuLCpu1f .mbr-section-subtitle {
+  letter-spacing: .2rem;
+}
+.cid-s2xuLCpu1f .media-container-column {
+  background-color: #4f4943;
+}
+@media (max-width: 767px) {
+  .cid-s2xuLCpu1f .media-container-column {
+    padding: 1rem !important;
+  }
+}
 .cid-qTkzRZLJNu .navbar {
   padding: .5rem 0;
   background: #073b4c;
@@ -872,7 +886,7 @@ section.lazy-placeholder:after {
   width: 30px;
   height: 2px;
   border-right: 5px;
-  background-color: #ffffff;
+  background-color: #879a9f;
 }
 .cid-qTkzRZLJNu button.navbar-toggler .hamburger span:nth-child(1) {
   top: 0;
@@ -1097,18 +1111,7 @@ section.lazy-placeholder:after {
 }
 .cid-qTkzRZLJNu .nav-link:hover,
 .cid-qTkzRZLJNu .dropdown-item:hover {
-  color: #c1c1c1 !important;
-}
-.cid-qTkA127IK8 {
-  background-image: url("../../../assets/images/mbr-4-1920x1280.jpg");
-}
-.cid-qTkA127IK8 .mbr-text,
-.cid-qTkA127IK8 .mbr-section-btn {
-  color: #ff7f9f;
-  text-align: center;
-}
-.cid-qTkA127IK8 H1 {
-  color: #ff3366;
+  color: #ff3366 !important;
 }
 .cid-qTkAaeaxX5 {
   padding-top: 60px;
@@ -1177,6 +1180,17 @@ section.lazy-placeholder:after {
     -webkit-justify-content: center;
   }
 }
+.cid-s2xtI5fxvU {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+}
+.cid-s2xtI5fxvU .mbr-text {
+  color: #767676;
+}
+.cid-s2xtI5fxvU .mbr-text p {
+  background: #ffffff;
+}
 .cid-qTkzRZLJNu .navbar {
   padding: .5rem 0;
   background: #073b4c;
@@ -1339,7 +1353,7 @@ section.lazy-placeholder:after {
   width: 30px;
   height: 2px;
   border-right: 5px;
-  background-color: #ffffff;
+  background-color: #879a9f;
 }
 .cid-qTkzRZLJNu button.navbar-toggler .hamburger span:nth-child(1) {
   top: 0;
@@ -1564,5 +1578,5 @@ section.lazy-placeholder:after {
 }
 .cid-qTkzRZLJNu .nav-link:hover,
 .cid-qTkzRZLJNu .dropdown-item:hover {
-  color: #c1c1c1 !important;
+  color: #ff3366 !important;
 }
