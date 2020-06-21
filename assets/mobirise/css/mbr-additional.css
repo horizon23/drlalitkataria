@@ -711,7 +711,7 @@ section.lazy-placeholder:after {
   opacity: 0.3;
 }
 .cid-s2xuLCpu1f {
-  background-image: url("../../../assets/images/mbr-6-1920x1280.jpg");
+  background-image: url("../../../assets/images/mbr-1-1920x1440.jpg");
 }
 .cid-s2xuLCpu1f .mbr-section-subtitle {
   letter-spacing: .2rem;
@@ -724,34 +724,31 @@ section.lazy-placeholder:after {
     padding: 1rem !important;
   }
 }
-.cid-s2xwwALLsO {
+.cid-s2xuLCpu1f .mbr-text,
+.cid-s2xuLCpu1f .mbr-section-btn {
+  text-align: center;
+}
+.cid-s2xuLCpu1f H1 {
+  text-align: center;
+}
+.cid-s2xF5ckq8j {
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #ffffff;
 }
-.cid-s2xwwALLsO .mbr-section-subtitle {
+.cid-s2xF5ckq8j .mbr-section-subtitle {
   color: #767676;
   font-weight: 300;
 }
-.cid-s2xwwALLsO .mbr-content-text {
+.cid-s2xF5ckq8j .mbr-content-text {
   color: #767676;
-  margin-bottom: 0;
 }
-.cid-s2xwwALLsO .card {
+.cid-s2xF5ckq8j .card {
   word-wrap: break-word;
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
 }
-@media (min-width: 992px) {
-  .cid-s2xwwALLsO .cards-block {
-    border-top: 2px solid #efefef;
-  }
-}
-.cid-s2xwwALLsO .cards-block .card {
-  border-bottom: 2px solid #efefef;
-  border-radius: 0;
-}
-.cid-s2xwwALLsO .cards-container {
+.cid-s2xF5ckq8j .cards-container {
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
@@ -761,46 +758,13 @@ section.lazy-placeholder:after {
   justify-content: center;
   word-break: break-word;
 }
-.cid-s2xwwALLsO .media-block {
-  flex-shrink: 0;
-  -webkit-flex-shrink: 0;
-}
-@media (min-width: 992px) {
-  .cid-s2xwwALLsO .media-block {
-    padding-left: 2rem;
-  }
-}
-.cid-s2xwwALLsO .cards-block {
-  flex-basis: 100%;
-  -webkit-flex-basis: 100%;
-}
-@media (max-width: 991px) {
-  .cid-s2xwwALLsO .media-block {
-    flex-basis: 100%;
-    -webkit-flex-basis: 100%;
-    padding-left: 0;
-    padding-bottom: 2rem;
-  }
-}
-@media (min-width: 768px) {
-  .cid-s2xwwALLsO .count {
-    width: 100px;
-  }
-}
 @media (max-width: 767px) {
-  .cid-s2xwwALLsO .panel-item {
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .cid-s2xwwALLsO .card-img {
-    padding-bottom: 1rem;
-    padding-right: 0 !important;
-    margin: auto;
+  .cid-s2xF5ckq8j .card:not(.last-child) {
+    padding-bottom: 1.5rem;
   }
 }
-.cid-s2xwwALLsO .media-container-row {
-  -webkit-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+.cid-s2xF5ckq8j .img-text {
+  color: #c1c1c1;
 }
 .cid-qTkzRZLJNu .navbar {
   padding: .5rem 0;
