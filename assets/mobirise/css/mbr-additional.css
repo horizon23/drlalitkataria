@@ -711,13 +711,13 @@ section.lazy-placeholder:after {
   opacity: 0.3;
 }
 .cid-s2xuLCpu1f {
-  background-image: url("../../../assets/images/mbr-1-1920x1440.jpg");
+  background-image: url("../../../assets/images/screenshot-2020-07-10-at-5.52.25-pm-2000x1554.png");
 }
 .cid-s2xuLCpu1f .mbr-section-subtitle {
   letter-spacing: .2rem;
 }
 .cid-s2xuLCpu1f .media-container-column {
-  background-color: #4f4943;
+  background-color: #222628;
 }
 @media (max-width: 767px) {
   .cid-s2xuLCpu1f .media-container-column {
@@ -729,6 +729,9 @@ section.lazy-placeholder:after {
   text-align: center;
 }
 .cid-s2xuLCpu1f H1 {
+  text-align: center;
+}
+.cid-s2xuLCpu1f H3 {
   text-align: center;
 }
 .cid-s2xF5ckq8j {
