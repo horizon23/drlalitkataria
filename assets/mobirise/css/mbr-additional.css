@@ -735,9 +735,10 @@ section.lazy-placeholder:after {
   text-align: center;
 }
 .cid-s4kV2zQyWW {
-  background: #ffffff;
+  background: #73aebc;
   padding-top: 0px;
   padding-bottom: 0px;
+  background: linear-gradient(0deg, #cc2952, #73aebc);
 }
 .cid-s4kV2zQyWW .image-block {
   margin: auto;
