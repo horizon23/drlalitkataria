@@ -950,6 +950,32 @@ section.lazy-placeholder:after {
 .cid-s2xKZrB54w textarea.form-control {
   min-height: 188px;
 }
+.cid-s4l9HNopoh .google-map {
+  height: 25rem;
+  position: relative;
+}
+.cid-s4l9HNopoh .google-map iframe {
+  height: 100%;
+  width: 100%;
+}
+.cid-s4l9HNopoh .google-map [data-state-details] {
+  color: #6b6763;
+  font-family: Montserrat;
+  height: 1.5em;
+  margin-top: -0.75em;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+.cid-s4l9HNopoh .google-map[data-state] {
+  background: #e9e5dc;
+}
+.cid-s4l9HNopoh .google-map[data-state="loading"] [data-state-details] {
+  display: none;
+}
 .cid-qTkzRZLJNu .navbar {
   padding: .5rem 0;
   background: #073b4c;
