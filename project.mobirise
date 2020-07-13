@@ -56,9 +56,7 @@
     "siteUrl": false,
     "cookiesAlert": false,
     "gdpr": false,
-    "screenshot": "screenshot.png",
-    "publishType": "local",
-    "publishPath": "file:///Users/kkulshrestha/Documents"
+    "screenshot": "screenshot.png"
   },
   "pages": {
     "index.html": {
